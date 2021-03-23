@@ -1,0 +1,19 @@
+{
+  "name": "ids-backend",
+  "version": "1.0.0",
+  "description": "Imposter Detection ",
+  "main": "server.js",
+ 
+  "scripts": {
+    "server": "nodemon server.js"
+  },
+  "author": "lusigi",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "is-empty": "^1.2.0",
+    "mongoose": "^5.12.1",
+    "validator": "^13.5.2"
+  }
+}
