@@ -50,4 +50,20 @@ router.get("/allstaff", (req, res) => {
   });
 });
 
+router.post("/individual", (req, res) => {
+  // const idNumber = req.body.idNumber
+  Staff.findOne({ idNumber: req.body.idNumber })
+    .then((user) => {
+      if (user) {
+        res.json(user);
+        console.log(user);
+      } else {
+        res.json({ idNumber: "Staff does not exist" });
+      }
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+
 module.exports = router;
